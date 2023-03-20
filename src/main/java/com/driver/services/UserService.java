@@ -24,10 +24,10 @@ public class UserService {
 
     public void deleteUser(int userId){
 
-        User user = userRepository3.findById(userId).get();
-
-        userRepository3.delete(user);
-        //userRepository3.deleteById(userId);
+//        User user = userRepository3.findById(userId).get();
+//
+//        userRepository3.delete(user);
+        userRepository3.deleteById(userId);
 
     }
 

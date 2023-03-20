@@ -7,6 +7,7 @@ import java.util.List;
 
 
 @Entity
+@Table(name="user")
 public class User {
 
 
@@ -75,6 +76,13 @@ public class User {
         return lastName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public List<Blog> getBlogList() {
         return BlogList;

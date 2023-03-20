@@ -27,14 +27,14 @@ public class BlogService {
         Blog blog = new Blog();
         blog.setTitle(title);
         blog.setContent(content);
+        blog.setPubDate(new Date());
 
         User user = userRepository1.findById(userId).get();
 
         user.getBlogList().add(blog);
-        blog.setUser(user);
 
-        userRepository1.save(user);
-        blogRepository1.save(blog);
+        userRepository1.save(user); // Cascading so blog can be saved
+        //blogRepository1.save(blog);
 
         return blog;
 
@@ -42,12 +42,12 @@ public class BlogService {
 
     public void deleteBlog(int blogId){
         //delete blog and corresponding images
+//
+//        Blog blog = blogRepository1.findById(blogId).get();
+//
+//        blogRepository1.delete(blog);
 
-        Blog blog = blogRepository1.findById(blogId).get();
-
-        blogRepository1.delete(blog);
-
-        //blogRepository1.deleteById(blogId);
+        blogRepository1.deleteById(blogId);
 
     }
 }

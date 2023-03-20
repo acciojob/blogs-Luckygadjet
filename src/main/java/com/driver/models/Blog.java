@@ -10,6 +10,7 @@ import java.util.List;
 
 
 @Entity
+@Table(name="Blog")
 public class Blog {
 
 
@@ -27,7 +28,7 @@ public class Blog {
 
     @ManyToOne
     @JoinColumn
-    User user;
+    private User user;
 
     @OneToMany(mappedBy = "blog",cascade = CascadeType.ALL)
     List<Image> imageList = new ArrayList<>();
