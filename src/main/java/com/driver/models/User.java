@@ -76,11 +76,11 @@ public class User {
     }
 
 
-    public List<Blog> getBlogs() {
+    public List<Blog> getBlogList() {
         return BlogList;
     }
 
-    public void setBlogs(List<Blog> blogs) {
+    public void setBlogList(List<Blog> blogs) {
         this.BlogList = blogs;
     }
 
