@@ -24,7 +24,7 @@ public class User {
 
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    List<Blog> blogs = new ArrayList<>();
+    List<Blog> BlogList = new ArrayList<>();
 
 
 
@@ -47,11 +47,11 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
+    public String getUsername() {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    public void setUsername(String userName) {
         this.userName = userName;
     }
 
@@ -77,11 +77,11 @@ public class User {
 
 
     public List<Blog> getBlogs() {
-        return blogs;
+        return BlogList;
     }
 
     public void setBlogs(List<Blog> blogs) {
-        this.blogs = blogs;
+        this.BlogList = blogs;
     }
 
 
